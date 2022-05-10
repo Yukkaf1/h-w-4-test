@@ -9,7 +9,8 @@
     --primary-white-color: #ffffff;
     --background-color: #2F303A;
     --background-color-secondary: #F5F4FA;
-    --border-color: #ECECEC
+    --border-color: #ECECEC;
+    --background-hero: #C4C4C4;
   }
 
 body {
@@ -154,13 +155,36 @@ padding-bottom: 32px;;
 }
 
 .address-nav {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
-.address-nav {
-  display: flex;
-  align-items: center;
+.link.mailto,
+.link.tel {
+ display: inline-flex;
+ align-items: center;
 }
+
+.link.mailto::before {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  content: "";
+
+  background-image: url(../images/Imd_test/envelope\ \(hover\).png);
+  background-size: cover;
+}
+
+.link.tel::before{ 
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  content: "";
+  background-image: url(../images/Imd_test/smartphone.svg);
+  background-size: cover;
+}
+
 
 /*Футер*/
 .page-footer {
@@ -185,6 +209,7 @@ padding-bottom: 32px;;
   line-height: 1.7;
 
   margin-top: 20px;
+ 
 }
 
 .address-footer :hover,
@@ -209,6 +234,25 @@ padding-bottom: 32px;;
     letter-spacing: 0,06em;
 
     margin-bottom: 30px;
+}
+
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: 
+  linear-gradient(
+    to right, rgba(47, 48, 58, 0.4), transparent 100%
+  ),
+  url(../images/Imd_test/Img.jpeg);
+  background-color: var(--background-hero);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /*Button*/
